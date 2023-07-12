@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Child from "./Child";
+import Form from "./Form";
+import { useState } from "react";
 
 function App() {
+  // const names = ["Lukas", "Cameron", "Scott"];
+  const [names, setNames] = useState(["Lukas", "Cameron", "Scott"]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      App.js
+      <Child name={names[0]} />
+      <Child name={names[1]} />
+      <Child name={names[2]} />
+      <Child name={names[3]} />
+      <Child name={names[4]} />
+      <Form name={names} setNames={setNames} />
     </div>
   );
 }
