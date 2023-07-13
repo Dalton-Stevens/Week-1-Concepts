@@ -1,0 +1,8 @@
+.user-info-container {
+  border: blue dotted 2px;
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
