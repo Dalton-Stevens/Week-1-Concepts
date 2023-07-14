@@ -8,10 +8,23 @@ const StateExample = () => {
     { firstName: "Bill", lastName: "Hitchcock" },
   ]);
 
+  const deleteUser = (index) => {
+    users.splice(index, 1);
+    setUsers([...users]);
+  };
+
   return (
-    <div>
-      {users.map((user) => {
-        return <User firstName={user.firstName} lastName={user.lastName} />;
+    <div className="state-example">
+      {users.map((user, index) => {
+        return (
+          <User
+            firstName={user.firstName}
+            lastName={user.lastName}
+            deleteUser={deleteUser}
+            index={index}
+            key={user.firstName}
+          />
+        );
       })}
     </div>
   );
